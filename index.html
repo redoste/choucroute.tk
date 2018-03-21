@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>CHOUCROUTE</title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			img {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				min-width: 100%;
+				min-height: 100%;
+				width: auto;
+				height: auto;
+				z-index: -100;
+				transform: translateX(-50%) translateY(-50%);
+				background-size: cover;
+			}
+			.btn {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				background-color: white
+			}
+			#closebtn { display: none }
+			#info { display: none }
+		</style>
+	</head>
+	<body>
+		<img id="img" src="choucroute.jpg" alt="choucroute"/>
+		<div id="info">
+			<h1>Choucroute</h1>
+			<p>
+				Useless website writen by <a href="https://redoste.tk">redoste</a><br/>
+				Close and info button by <a href="https://material.io/">Google material.io</a><br/>
+				Image source: <a href="http://www.dishmaps.com/choucroute-garnie/28299">http://www.dishmaps.com/choucroute-garnie/28299</a><br/>
+			</p>
+		</div>
+		<a id="infobtn" href="#" class="btn">
+			<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z" fill="none"/>
+				<path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"/>
+			</svg>
+		</a>
+		<a id="closebtn" href="#" class="btn">
+			<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+				<path d="M0 0h24v24H0z" fill="none"/>
+			</svg>
+		</a>
+		<script>
+			document.getElementById("infobtn").onclick = function(){
+				document.getElementById("info").style.display = "block";
+				document.getElementById("closebtn").style.display = "block";
+				document.getElementById("img").style.display = "none";
+				document.getElementById("infobtn").style.display = "none";
+			};
+			document.getElementById("closebtn").onclick = function(){
+				document.getElementById("info").style.display = "none";
+				document.getElementById("closebtn").style.display = "none";
+				document.getElementById("img").style.display = "block";
+				document.getElementById("infobtn").style.display = "block";
+			};
+		</script>
+	</body>
+</html>
